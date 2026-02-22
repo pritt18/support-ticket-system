@@ -35,12 +35,10 @@ SECRET_KEY = 'django-insecure-@065tk5p#&8i3=!@n8xb+qm#ua^ce@@h4=sb(4w($@jveo#gqm
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "support-ticket-system-3.onrender.com",
+    "support-ticket-system-4.onrender.com",
     "localhost",
     "127.0.0.1",
 ]
-
-
 # Application definition
 
 INSTALLED_APPS = [

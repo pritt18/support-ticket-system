@@ -11,7 +11,7 @@ function App() {
   // Fetch Tickets
   // =========================
   const fetchTickets = async () => {
-    const response = await fetch("https://support-ticket-system-5.onrender.com/api/tickets/");
+    const response = await fetch("https://support-ticket-system-6.onrender.com/api/tickets/");
     const data = await response.json();
     setTickets(data);
   };
@@ -27,7 +27,7 @@ function App() {
     if (!description) return alert("Enter description");
 
     const response = await fetch(
-      "https://support-ticket-system-5.onrender.com/api/tickets/classify/",
+      "https://support-ticket-system-6.onrender.com/api/tickets/classify/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -46,7 +46,7 @@ function App() {
     if (!title || !description)
       return alert("Title and Description required");
 
-    await fetch("https://support-ticket-system-5.onrender.com/api/tickets/", {
+    await fetch("https://support-ticket-system-6.onrender.com/api/tickets/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -68,7 +68,7 @@ function App() {
   // Update Status
   // =========================
   const updateStatus = async (id, newStatus) => {
-    await fetch(`https://support-ticket-system-5.onrender.com/api/tickets/${id}/`, {
+    await fetch(`https://support-ticket-system-6.onrender.com/api/tickets/${id}/`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status: newStatus }),
@@ -81,7 +81,7 @@ function App() {
   // Delete Ticket
   // =========================
   const deleteTicket = async (id) => {
-    await fetch(`https://support-ticket-system-5.onrender.com/api/tickets/${id}/`, {
+    await fetch(`https://support-ticket-system-6.onrender.com/api/tickets/${id}/`, {
       method: "DELETE",
     });
 

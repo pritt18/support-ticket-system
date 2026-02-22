@@ -1,4 +1,4 @@
-Flask
+Django
 gunicorn
-openai
 python-dotenv
+openai

@@ -1,8 +1,5 @@
+from django.contrib import admin
 from django.urls import path, include
-
-urlpatterns = [
-    path('api/', include('tickets.urls')),
-]
 from django.http import HttpResponse
 
 def home(request):
@@ -10,4 +7,6 @@ def home(request):
 
 urlpatterns = [
     path('', home),
+    path('admin/', admin.site.urls),
+    path('api/', include('tickets.urls')),  # <-- IMPORTANT
 ]
